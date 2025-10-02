@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chisfuerzo: Aprende y Crece</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body class="bg-gray-50 min-h-screen">
+    
+    <header class="bg-white shadow-md sticky top-0 z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <a id="home-button" href="#" class="flex items-center space-x-2 cursor-pointer">
+                <span class="text-3xl">💡</span>
+                <span class="text-2xl font-extrabold tracking-tight gradient-text" style="--tw-gradient-from: #2563eb; --tw-gradient-to: #3b82f6;">Chisfuerzo</span>
+            </a>
+            </div>
+    </header>
+
+    <main class="py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div id="app-container" class="transition-opacity duration-500 opacity-0">
+            </div>
+    </main>
+
+    <footer class="mt-16 py-6 border-t border-gray-200 text-center text-gray-500 text-sm">
+        <p>
+            Desarrollado con ❤️ y esfuerzo. 
+            <span id="firebase-info" class="text-xs ml-2"></span>
+        </p>
+    </footer>
+
+    <script type="module">
+        import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js';
+        import { getAuth, signInAnonymously } from 'https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js';
+        import { getFirestore, doc, setDoc } from 'https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js';
+
+        // Hacer que estos módulos sean accesibles globalmente si son necesarios en app.js
+        window.firebase = { initializeApp, getAuth, signInAnonymously, getFirestore, doc, setDoc };
+    </script>
+    
+    <script type="module" src="app.js"></script>
+
+</body>
+</html>
