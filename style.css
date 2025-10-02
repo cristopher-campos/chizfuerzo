@@ -1,0 +1,55 @@
+/* Importar la fuente 'Inter' para consistencia */
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+/* Estilo para los marcadores de listas desordenadas (bullets) */
+.list-disc li::marker {
+    color: #2563eb; /* Azul primario */
+}
+
+.list-circle li::marker {
+    color: #1d4ed8; /* Azul más oscuro */
+}
+
+/* Estilos de formato para el contenido de la teoría */
+.theory-content p {
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.theory-content em {
+    font-style: italic;
+}
+
+.theory-content strong {
+    font-weight: 700; /* Más robusto que el 600 */
+    color: #1f2937; /* Gris oscuro para resaltar */
+}
+
+/* Estilo para el texto con gradiente (usado en el título "Chisfuerzo") */
+.gradient-text {
+    /* Las variables de color de Tailwind se definen en el HTML para evitar dependencias */
+    background-image: linear-gradient(to right, var(--tw-gradient-from, #000), var(--tw-gradient-to, #fff));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    font-weight: 800;
+}
+
+/* Animación de entrada suave para el contenido */
+.fade-in {
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
